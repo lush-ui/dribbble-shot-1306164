@@ -1,0 +1,73 @@
+.ui.button {
+  border-radius: 2px;
+  box-sizing: content-box;
+  -ms-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+}
+.ui.button.w-120 {
+  width: 120px;
+}
+.ui.button.transparent {
+  background: transparent;
+  border: 2px solid #282c34;
+  color: #545964;
+  box-sizing: content-box;
+  -ms-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+}
+.ui.button.transparent:hover {
+  color: #606673;
+}
+.ui.button.transparent:active {
+  color: #3e424a;
+}
+.ui.button.primary {
+  background-color: #45c8dc;
+}
+.ui.button.primary:hover {
+  background-color: #47d0e5;
+}
+.ui.button.primary:active {
+  background-color: #3fb9cc;
+}
+.ui.button.secondary {
+  background-color: #7e8493;
+}
+.ui.button.secondary:hover {
+  background-color: #848a99;
+}
+.ui.button.secondary:active {
+  background-color: #696e7a;
+}
+.ui.button.error {
+  background-color: #e35d43;
+}
+.ui.button.error:hover {
+  background-color: #ed6347;
+}
+.ui.button.error:active {
+  background-color: #c9543c;
+}
+.ui.square {
+  border: 1px solid #e1e2e2;
+  border-radius: 2px;
+  background-color: #f7f8f8;
+  padding: 20px 50px;
+}
+.ui.slider {
+  background-color: #babec5;
+}
+.ui.slider >.handle {
+  width: 22px;
+  height: 22px;
+  top: -6px;
+  background-color: #fff;
+  border-radius: 100%;
+  border: 3px solid #1d2027;
+  box-shadow: 0px 3px 3px 0px;
+}
+.archive-options {
+  place: holder;
+}

@@ -1,0 +1,140 @@
+extends layout/default
+
+append styles
+  :stylus
+    body
+      color #7e8493
+
+    *
+      box-sizing border-box
+      -ms-box-sizing border-box
+      -moz-box-sizing border-box
+      -webkit-box-sizing border-box
+
+    .archive-options
+      >.container
+        width 800px
+        height 620px
+        overflow hidden
+        position relative
+
+        >.side
+          &.top
+            position absolute
+            top 0
+            background-color #3d4149
+            width 100%
+            padding 12px
+            text-align right
+            height 45px
+
+            >a.close-button
+              cursor pointer
+              color #5d626e
+
+              &:hover
+                color #666b78
+
+              &:active
+                color #555963
+
+          &.bottom
+            position absolute
+            bottom 0
+            background-color rgba(29, 32, 39, 0.8)
+            width 100%
+            padding 30px
+            text-align right
+
+          &.left
+            float left
+            width 30%
+            margin-top 45px
+            background-color #262a33
+            height 100%
+
+          &.right
+            float left
+            width 70%
+            height 100%
+            background-color #eff0f0
+            padding 30px 40px
+            margin-top 45px
+
+append content
+  .archive-options
+    .container
+      .top.side
+        a.close-button
+          i.fa.fa-times.font-size-20
+
+      .left.side
+        include ./parts/left-menu
+
+      .right.side
+        .title.margin-bottom-20 ARCHIVING OPTIONS
+
+        .ui.square.margin-bottom-25
+          .part.margin-bottom-20
+            .ui.component.slider.days
+              .handle
+          .row
+            .col-7
+              .text.font-size-14.height-28.line-height-28
+                span ARCHIVE EVERY 
+                span#days 0
+                span  DAYS.
+            .col-5
+              .text-align-right
+                .ui.button.primary.medium.w-120.compact ADVANCED
+
+        .ui.square.margin-bottom-25
+          .part.margin-bottom-20
+            .ui.component.slider.archives
+              .handle
+          .part
+            .text.font-size-14
+              span STORE UP TO 
+              span#archives 0
+              span  ARCHIVES.
+
+        .ui.square.margin-bottom-25
+          .title.font-size-14.margin-bottom-10 CLEAR ALL ARCHIVES
+          .text.font-size-14.margin-bottom-10
+            span.color-red This action cannot be undone. 
+            span.color-aaa Individuel archives 
+            .text.color-aaa can be emptied from the Archive Manager on the 
+            .text.color-aaa Tools menu
+          .part.text-align-right
+            .ui.button.error.medium.w-120.compact CLEAR
+
+      .bottom.side
+        .row
+          .col-6
+            .text-align-left
+              .ui.button.medium.compact.transparent RESTORE DEFAULTS
+          .col-6
+              .text-align-right.margin-top-2
+              .ui.button.primary.medium.w-120.compact(style="margin-right: 20px;") OK
+              .ui.button.secondary.medium.w-120.compact CANCEL
+
+append scripts
+  script
+    var Slider = require('slider');
+        require('live-data');
+
+    var sliderDays = new Slider(document.querySelector('.component.slider.days'));
+    var sliderArchives = new Slider(document.querySelector('.component.slider.archives'));
+
+    sliderDays.on('progress', function (progress) {
+      document.querySelector('#days').textContent = Math.round(progress * 30);
+    });
+
+    sliderArchives.on('progress', function (progress) {
+      document.querySelector('#archives').textContent = Math.round(progress * 100);
+    });
+
+    sliderDays.progress = 0.23;
+    sliderDays.trigger('progress', 0.23);
+    sliderArchives.progress = 0.8;
+    sliderArchives.trigger('progress', 0.8);

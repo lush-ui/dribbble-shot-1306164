@@ -1,0 +1,54 @@
+:stylus
+  .ui.left-menu
+    width 100%
+
+    .ui.menu-button
+      padding 14px 0
+      text-align center
+      box-sizing border-box
+      -ms-box-sizing border-box
+      -moz-box-sizing border-box
+      -webkit-box-sizing border-box
+      cursor pointer
+      color #545964
+      background-color #262a33
+      border-left 4px solid transparent
+      border-right 4px solid transparent
+
+      &:hover
+        color #818799
+        background-color #242830
+
+      &.selected
+        color #818799
+        background-color #1d2027
+        border-left-color #e42601
+
+      i
+        font-size 28px
+        margin-bottom 4px
+
+      .text
+        font-size 12px
+        font-weight 500
+        font-family "Helvetica Neue", "Helvetica"
+
+.ui.left-menu
+  .ui.menu-button(data-click-add-class="selected", data-behaviour="solitary")
+    i.fa.fa-calendar
+    .text CALENDAR
+  .ui.menu-button(data-click-add-class="selected", data-behaviour="solitary")
+    i.fa.fa-desktop
+    .text DESKTOP
+  .ui.menu-button.selected(data-click-add-class="selected", data-behaviour="solitary")
+    i.fa.fa-archive
+    .text ARCHIVES
+  .ui.menu-button(data-click-add-class="selected", data-behaviour="solitary")
+    i.fa.fa-credit-card
+    .text CREDIT CARD
+  .ui.menu-button(data-click-add-class="selected", data-behaviour="solitary")
+    i.fa.fa-cloud
+    .text CLOUD
+  .ui.menu-button(data-click-add-class="selected", data-behaviour="solitary")
+    i.fa.fa-bar-chart-o
+    .text CHART

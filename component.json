@@ -1,0 +1,25 @@
+{
+  "name": "archive-options",
+  "repo": "lush-ui/archive-options",
+  "description": "Archive options",
+  "version": "0.0.1",
+  "keywords": [],
+  "dependencies": {
+    "FortAwesome/Font-Awesome": "*",
+    "shallker/live-data": "*",
+    "shallker-wang/style-units": "*",
+    "bottom/button": "*",
+    "bottom/button-sizes": "*",
+    "bottom/button-types": "*",
+    "base-ui/slider": "*",
+    "base-ui/slider-theme-basic": "*",
+    "base-ui/grid": "*"
+  },
+  "development": {
+    "necolas/normalize.css": "*"
+  },
+  "license": "MIT",
+  "styles": [
+    "css/archive-options.css"
+  ]
+}
