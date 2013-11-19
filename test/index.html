@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Test</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../build/build.css"><style type="text/css">.archive-options >.container {
+  width: 800px;
+  height: 650px;
+  overflow: hidden;
+  position: relative;
+}
+.archive-options >.container >.side.top {
+  position: absolute;
+  top: 0;
+  background-color: #3d4149;
+  width: 100%;
+  padding: 12px;
+  text-align: right;
+  height: 45px;
+}
+.archive-options >.container >.side.top >a.close-button {
+  cursor: pointer;
+  color: #5d626e;
+}
+.archive-options >.container >.side.top >a.close-button:hover {
+  color: #666b78;
+}
+.archive-options >.container >.side.top >a.close-button:active {
+  color: #555963;
+}
+.archive-options >.container >.side.bottom {
+  position: absolute;
+  bottom: 0;
+  background-color: rgba(29,32,39,0.8);
+  width: 100%;
+  padding: 30px;
+  text-align: right;
+}
+.archive-options >.container >.side.left {
+  float: left;
+  width: 30%;
+  margin-top: 45px;
+  background-color: #262a33;
+  height: 100%;
+}
+.archive-options >.container >.side.right {
+  float: left;
+  width: 70%;
+  height: 100%;
+  background-color: #eff0f0;
+  padding: 30px 40px;
+  margin-top: 45px;
+}
+</style>
+  </head>
+  <body>
+    <div class="archive-options">
+      <div class="container">
+        <div class="top side"><a class="close-button"><i class="fa fa-times font-size-20"></i></a></div>
+        <div class="left side"><style type="text/css">.ui.left-menu {
+  width: 100%;
+}
+.ui.left-menu .ui.menu-button {
+  padding: 14px 0;
+  text-align: center;
+  box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  cursor: pointer;
+  color: #545964;
+  background-color: #262a33;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+}
+.ui.left-menu .ui.menu-button:hover {
+  color: #818799;
+  background-color: #242830;
+}
+.ui.left-menu .ui.menu-button.selected {
+  color: #818799;
+  background-color: #1d2027;
+  border-left-color: #e42601;
+}
+.ui.left-menu .ui.menu-button i {
+  font-size: 28px;
+  margin-bottom: 4px;
+}
+.ui.left-menu .ui.menu-button .text {
+  font-size: 11px;
+  font-weight: 500;
+}
+</style>
+          <div class="ui left-menu">
+            <div data-click-add-class="selected" data-behaviour="solitary" class="ui menu-button"><i class="fa fa-calendar"></i>
+              <div class="text">CALENDAR</div>
+            </div>
+            <div data-click-add-class="selected" data-behaviour="solitary" class="ui menu-button"><i class="fa fa-desktop"></i>
+              <div class="text">DESKTOP</div>
+            </div>
+            <div data-click-add-class="selected" data-behaviour="solitary" class="ui menu-button selected"><i class="fa fa-archive"></i>
+              <div class="text">ARCHIVES</div>
+            </div>
+            <div data-click-add-class="selected" data-behaviour="solitary" class="ui menu-button"><i class="fa fa-credit-card"></i>
+              <div class="text">CREDIT CARD</div>
+            </div>
+            <div data-click-add-class="selected" data-behaviour="solitary" class="ui menu-button"><i class="fa fa-cloud"></i>
+              <div class="text">CLOUD</div>
+            </div>
+            <div data-click-add-class="selected" data-behaviour="solitary" class="ui menu-button"><i class="fa fa-bar-chart-o"></i>
+              <div class="text">CHART</div>
+            </div>
+          </div>
+        </div>
+        <div class="right side">
+          <div class="title margin-bottom-20">ARCHIVING OPTIONS</div>
+          <div class="ui square margin-bottom-25">
+            <div class="part margin-bottom-20">
+              <div class="ui component slider days">
+                <div class="handle"></div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-7">
+                <div class="text font-size-14 height-28 line-height-28"><span>ARCHIVE EVERY </span><span id="days">0</span><span> DAYS.</span></div>
+              </div>
+              <div class="col-5">
+                <div class="text-align-right">
+                  <div class="ui button primary medium w-120 compact">ADVANCED</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="ui square margin-bottom-25">
+            <div class="part margin-bottom-20">
+              <div class="ui component slider archives">
+                <div class="handle"></div>
+              </div>
+            </div>
+            <div class="part">
+              <div class="text font-size-14"><span>STORE UP TO </span><span id="archives">0</span><span> ARCHIVES.</span></div>
+            </div>
+          </div>
+          <div class="ui square margin-bottom-25">
+            <div class="title font-size-14 margin-bottom-10">CLEAR ALL ARCHIVES</div>
+            <div class="text font-size-14 margin-bottom-10"><span class="color-red">This action cannot be undone. </span><span class="color-aaa">Individuel archives </span>
+              <div class="text color-aaa">can be emptied from the Archive Manager on the </div>
+              <div class="text color-aaa">Tools menu</div>
+            </div>
+            <div class="part text-align-right">
+              <div class="ui button error medium w-120 compact">CLEAR</div>
+            </div>
+          </div>
+        </div>
+        <div class="bottom side">
+          <div class="row">
+            <div class="col-6">
+              <div class="text-align-left">
+                <div class="ui button medium compact transparent">RESTORE DEFAULTS</div>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="text-align-right margin-top-2"></div>
+              <div style="margin-right: 20px;" class="ui button primary medium w-120 compact">OK</div>
+              <div class="ui button secondary medium w-120 compact">CANCEL</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="../build/build.js"></script>
+    <script>
+      var Slider = require('slider');
+          require('live-data');
+          
+      var sliderDays = new Slider(document.querySelector('.component.slider.days'));
+      var sliderArchives = new Slider(document.querySelector('.component.slider.archives'));
+      
+      sliderDays.on('progress', function (progress) {
+        document.querySelector('#days').textContent = Math.round(progress * 30);
+      });
+      
+      sliderArchives.on('progress', function (progress) {
+        document.querySelector('#archives').textContent = Math.round(progress * 100);
+      });
+      
+      sliderDays.progress = 0.23;
+      sliderDays.trigger('progress', 0.23);
+      sliderArchives.progress = 0.8;
+      sliderArchives.trigger('progress', 0.8);
+    </script>
+  </body>
+</html>
