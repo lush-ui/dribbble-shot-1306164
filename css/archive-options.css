@@ -1,12 +1,16 @@
 .ui.button {
+  color: #fff;
   border-radius: 2px;
-  box-sizing: content-box;
-  -ms-box-sizing: content-box;
-  -moz-box-sizing: content-box;
-  -webkit-box-sizing: content-box;
+  box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
 }
 .ui.button.w-120 {
   width: 120px;
+}
+.ui.button.medium.compact {
+  line-height: 30px;
 }
 .ui.button.transparent {
   background: transparent;
