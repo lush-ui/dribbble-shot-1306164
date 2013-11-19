@@ -8,9 +8,8 @@
     "FortAwesome/Font-Awesome": "*",
     "shallker/live-data": "*",
     "shallker-wang/style-units": "*",
-    "bottom/button": "*",
-    "bottom/button-sizes": "*",
-    "bottom/button-types": "*",
+    "base-ui/button": "*",
+    "base-ui/medium-button": "*",
     "base-ui/slider": "*",
     "base-ui/slider-theme-basic": "*",
     "base-ui/grid": "*"
